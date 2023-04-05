@@ -1,9 +1,18 @@
-.tabs {
-  background-color: aquamarine
+.tabs__list {
+  display: inline-block;
+  background: #EBEBEB;
+  border-radius: 50px;
+  padding: 4px;
+  margin-bottom: 36px;
 }
 
 .tabs__content {
   display: none;
+}
+
+.tabs__content--title {
+  font-size: 26px;
+  margin-bottom: 32px;
 }
 
 .tabs__content--active {
@@ -11,9 +20,21 @@
 }
 
 .tabs__btn {
-  background-color: green;
+  background-color: transparent;
+  border: 2px solid transparent;
+  font-weight: 500;
+  font-size: 14px;
+  color: #222222;
+  min-width: 151px;
+  padding: 6.5px 40px;
+  border-radius: 500px;
+  cursor: pointer;
+  outline: none;
+
 }
 
 .tabs__btn--active {
-  background-color: red;
+  background: #FFFFFF;
+  box-shadow: 0px 6px 17px rgba(0, 0, 0, 0.08);
+  border: 2px solid #222222;
 }
