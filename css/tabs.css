@@ -1,0 +1,19 @@
+.tabs {
+  background-color: aquamarine
+}
+
+.tabs__content {
+  display: none;
+}
+
+.tabs__content--active {
+  display: block;
+}
+
+.tabs__btn {
+  background-color: green;
+}
+
+.tabs__btn--active {
+  background-color: red;
+}
