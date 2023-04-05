@@ -6,11 +6,12 @@
   --subtitle-color: #42526B;/* цвет подзаголовков */
 
   --nav-link-color: #222222; /* цвет ссылок в навигации */
+
+  --accent-color: #FF385C; /* акцентированный цвет */
 }
 
-
-/* dark button */
-.dark {
+/* btn-primary */
+.btn-primary {
   --button-bg-color: #FF385C;
   --button-text-color: #ffffff;
 }

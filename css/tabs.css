@@ -12,7 +12,9 @@
 
 .tabs__content--title {
   font-size: 26px;
+  font-weight: 300;
   margin-bottom: 32px;
+  color: var(--title-color);
 }
 
 .tabs__content--active {
