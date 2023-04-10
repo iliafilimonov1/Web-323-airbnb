@@ -29,12 +29,13 @@
 <body>
   <header class="header">
     <div class="container">
-      <a class="header-logo" href="#">
+      <a class="header-logo" href="index.html">
         <img src="images/header/logo.svg" alt="logo">
       </a>
       <nav class="header-nav">
         <a class="nav-link active" href="/">Home</a>
         <a class="nav-link ml-36px" href="/shop.html">Shop</a>
+        <a class="nav-link ml-36px" href="help.html">Help</a>
         <a class="nav-link ml-36px" href="#">Blogs</a>
         <a class="nav-link ml-36px" href="#">About</a>
         <a class="nav-link ml-36px" href="#">Contact</a>
@@ -51,6 +52,43 @@
         <input type="checkbox" class="switch">
         <label for="s2"></label>
       </fieldset>
+
+      <button class="dropdown__button">
+        <svg class="icon" width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="6.55671e-08" y1="1.25" x2="14" y2="1.25" stroke="#222222" stroke-width="1.5" />
+          <line x1="6.55671e-08" y1="5.25" x2="14" y2="5.25" stroke="#222222" stroke-width="1.5" />
+          <line x1="6.55671e-08" y1="9.25" x2="14" y2="9.25" stroke="#222222" stroke-width="1.5" />
+        </svg>
+        <div class="avatar">
+          <!-- <img src="images/1.webp" alt="asda"> -->
+          <svg width="28" height="28" viewBox="0 0 32 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="17" cy="17" r="15" fill="#717171" />
+            <mask id="mask0_351_652" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="4" y="4" width="26"
+              height="26">
+              <circle cx="17" cy="17" r="12.1875" fill="#737373" />
+            </mask>
+            <g mask="url(#mask0_351_652)">
+              <circle cx="17" cy="15.125" r="6.5625" fill="white" />
+              <circle cx="17" cy="31.0625" r="11.25" fill="white" />
+            </g>
+          </svg>
+        </div>
+      </button>
+      <ul class="dropdown__menu">
+        <a href="#" class="dropdown__menu-item">
+          <li>Log in</li>
+        </a>
+        <a href="#" class="dropdown__menu-item">
+          <li>Sign up</li>
+        </a>
+        <div class="menu-item__line"></div>
+        <a href="#" class="dropdown__menu-item">
+          <li>Airbnb your home</li>
+        </a>
+        <a href="help.html" class="dropdown__menu-item">
+          <li>Help</li>
+        </a>
+      </ul>
     </div>
   </header>
 
@@ -643,61 +681,6 @@
         </div>
       </div>
     </section>
-
-    <!-- <section class="features">
-      <div class="container">
-        <h2 class="title">Help center</h2>
-        <div class="tabs">
-          <nav class="tabs__list">
-            <button class="tabs__btn tabs__btn--active" data-tabs-path="guest">Guest</button>
-            <button class="tabs__btn" data-tabs-path="host">Host</button>
-            <button class="tabs__btn" data-tabs-path="experience">Experience host</button>
-            <button class="tabs__btn" data-tabs-path="admin">Travel admin</button>
-          </nav>
-
-          <div class="tabs__content tabs__content--active" data-tabs-target="guest">
-            <h3 class="tabs__content--title">Guides for getting started</h3>
-            <div class="help-card mr-9">
-              <div class="help-card__image">
-                <img src="images/help/help-image-1.jpg" alt="image">
-              </div>
-              <h3 class="help-card__title">Finding a stay that's right for you</h3>
-            </div>
-            <div class="help-card mr-9">
-              <div class="help-card__image">
-                <img src="images/help/help-image-2.jpg" alt="image">
-              </div>
-              <h3 class="help-card__title">How cancellations work</h3>
-            </div>
-            <div class="help-card mr-9">
-              <div class="help-card__image">
-                <img src="images/help/help-image-3.jpg" alt="image">
-              </div>
-              <h3 class="help-card__title">Setting up your account</h3>
-            </div>
-            <div class="help-card">
-              <div class="help-card__image">
-                <img src="images/help/help-image-4.png" alt="image">
-              </div>
-              <h3 class="help-card__title">Getting protected through AirCover</h3>
-            </div>
-          </div>
-
-          <div class="tabs__content" data-tabs-target="host">
-
-          </div>
-
-          <div class="tabs__content" data-tabs-target="experience">
-
-          </div>
-
-          <div class="tabs__content" data-tabs-target="admin">
-
-          </div>
-        </div>
-      </div>
-    </section> -->
-
   </main>
 
   <footer class="footer">

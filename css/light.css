@@ -8,6 +8,8 @@
   --nav-link-color: #222222; /* цвет ссылок в навигации */
 
   --accent-color: #FF385C; /* акцентированный цвет */
+
+  --bg-hover: #F7F7F7;
 }
 
 /* btn-primary */
