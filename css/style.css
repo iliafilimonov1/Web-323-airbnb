@@ -509,65 +509,6 @@ main {
   display: inline-block;
 }
 
-/* section help */
-.help-card {
-  width: 320px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-bottom: 40px;
-  background: #FFFFFF;
-  border-radius: 12px;
-}
-
-.help-card:hover {
-  cursor: pointer;
-}
-
-.mr-9 {
-  margin-right: 9px;
-}
-
-.help-card__image {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-.help-card__image img {
-  vertical-align: middle;
-  max-width: 100%;
-  min-height: 255px;
-  object-fit: cover;
-}
-
-.help-card__image::after {
-  content: '';
-  opacity: 0;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: black;
-  transition-duration: 0s;
-  transition-property: opacity;
-  transition-timing-function: ease-out;
-}
-
-.help-card:hover .help-card__image::after {
-  opacity: .10;
-}
-
-.help-card__title {
-  font-family: "Poppins-Semibolt", sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  margin-top: 24px;
-  text-transform: none;
-  color: #2D2D2D;
-}
-
 /* footer */
 
 .footer {
