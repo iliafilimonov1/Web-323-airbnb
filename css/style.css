@@ -5,6 +5,7 @@
 @import "../css/forms.css";
 @import "../css/tabs.css";
 @import "../css/help.css";
+@import "../css/modal.css";
 
 body {
   font-family: "Poppins", Tahoma, Arial, sans-serif;
@@ -234,99 +235,6 @@ main {
   bottom: -10px;
 }
 
-/* modal */
-.modal {
-  border: 0;
-  position: relative;
-  padding: 40px 24px;
-  box-sizing: border-box;
-  border-radius: 8px;
-  min-width: 1000px;
-  max-width: 1000px;
-  min-height: 600px;
-  background-color: var(--body-color);
-  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2);
-}
-
-.modal .close-button {
-  background-color: transparent;
-  padding: 8px;
-  border: 0;
-  cursor: pointer;
-  margin-bottom: 24px;
-  position: relative;
-}
-
-.modal .close-button::before {
-  bottom: 0;
-  content: '';
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  border-radius: 22px;
-  left: 0;
-  right: 0;
-}
-
-.modal .close-button:hover::before {
-  background-color: var(--bg-hover);
-}
-
-.modal .close-button svg path {
-  stroke: var(--title-color);
-}
-
-.modal-title {
-  margin-top: 16px;
-  font-weight: 600;
-  font-size: 23px;
-  line-height: 32px;
-  color: var(--title-color);
-}
-
-.modal-subtitle {
-  margin-top: 16px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: var(--text-color);
-  max-width: 384px;
-  color: var(--subtitle-color);
-}
-
-/* card in modal tabs (currency and region) */
-.modal-card {
-  padding: 8px;
-  border-radius: 8px;
-  border: 1px solid transparent;
-  display: inline-block;
-  width: 25%;
-  margin-right: -4px;
-  box-sizing: border-box;
-  cursor: pointer;
-  margin-bottom: 12px;
-}
-
-.modal-card:hover {
-  background-color: rgb(247, 247, 247);
-}
-
-.modal-card h3 {
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 24px;
-  letter-spacing: 0.15px;
-  color: #222222;
-}
-
-.modal-card span {
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.25px;
-  color: rgb(113, 113, 113);
-}
-
 /* main slider */
 
 .slider {
@@ -474,8 +382,14 @@ main {
 /* атомарные классы */
 .flex {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }
 
 .mt-24px {
