@@ -1,8 +1,11 @@
+import { ModalLogin } from "./modal-login.js";
+
+const modalLogin = new ModalLogin();
+
 /* button-airbnb */
 const button = document.querySelector('.btn-airbnb')
 button.addEventListener('mousemove', e => {
   const rect = button.getBoundingClientRect();
-  console.log(rect);
   const x = (e.clientX - rect.left) * 100 / button.clientWidth
   const y = (e.clientY - rect.top) * 100 / button.clientHeight
   button.style.setProperty('--mouse-x', x);
