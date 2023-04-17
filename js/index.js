@@ -1,3 +1,9 @@
+import { ModalLogin } from "./modal-login.js";
+
+const modalLogin = new ModalLogin();
+
+
+/* модалка language */
 const modal = document.querySelector('#modal'); // получение доступа к модалке
 const openModal = document.querySelector('.language'); // доступ к кнопке language
 const closeModal = document.querySelector('.close-button'); // доступ к кнопке Close Modal внутри модалки

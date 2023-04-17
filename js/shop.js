@@ -1,15 +1,6 @@
-const modal = document.querySelector('#modal'); // получение доступа к модалке
-const openModal = document.querySelector('.language'); // доступ к кнопке Login
-const closeModal = document.querySelector('.close-button'); // доступ к кнопке Close Modal внутри модалки
+import { ModalLogin } from "./modal-login.js";
 
-openModal.addEventListener("click", () => {
-  modal.showModal();
-});
-
-
-closeModal.addEventListener("click", () => {
-  modal.close();
-});
+const modalLogin = new ModalLogin();
 
 
 /* initialize swiper shop page */
