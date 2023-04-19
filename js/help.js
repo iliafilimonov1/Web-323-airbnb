@@ -13,17 +13,6 @@ button.addEventListener('mousemove', e => {
 })
 
 
-/* handler for header active */
-const links = document.querySelectorAll('.nav-link');
-
-links.forEach(link => {
-  link.addEventListener('click', event => {
-    document.querySelector('.nav-link.active').classList.remove('active');
-    event.currentTarget.classList.add('active');
-  })
-})
-
-
 /* dropdown */
 const dropdownButton = document.querySelector('.dropdown__button');
 const dropdownMenu = document.querySelector('.dropdown__menu');
@@ -50,27 +39,39 @@ dropdownMenuItems.forEach(item => {
 
 
 /* tabs */
-document.addEventListener('DOMContentLoaded', () => {
-  const tabs = document.querySelector('.tabs');
-  const tabsBtn = document.querySelectorAll('.tabs__btn');
-  const tabsContent = document.querySelectorAll('.tabs__content');
+window.onload = () => {
+  const tabs = document.querySelector(".tabs");
+  const tabsBtn = document.querySelectorAll(".tabs-btn");
+  const tabsContent = document.querySelectorAll(".tabs__content");
 
   if (tabs) {
-    tabs.addEventListener('click', e => {
-      if (e.target.classList.contains('tabs__btn')) {
+    const line = document.querySelector(".line");
+
+    // Устанавливаем начальную ширину линии при загрузке страницы
+    line.style.width = tabsBtn[0].clientWidth + "px";
+    line.style.left = tabsBtn[0].offsetLeft + "px";
+
+    tabs.addEventListener("click", (e) => {
+      if (e.target.classList.contains("tabs-btn")) {
         const tabsPath = e.target.dataset.tabsPath;
-        tabsBtn.forEach(el => el.classList.remove('tabs__btn--active'));
-        document.querySelector(`[data-tabs-path="${tabsPath}"]`).classList.add('tabs__btn--active');
+        tabsBtn.forEach((el) => el.classList.remove("tabs_btn--active"));
+        document
+          .querySelector(`[data-tabs-path="${tabsPath}"]`)
+          .classList.add("tabs_btn--active");
         tabsHandler(tabsPath);
+        line.style.width = e.target.clientWidth + "px";
+        line.style.left = e.target.offsetLeft + "px";
       }
-    })
+    });
   }
 
-  const tabsHandler = path => {
-    tabsContent.forEach(el => el.classList.remove('tabs__content--active'));
-    document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs__content--active');
-  }
-})
+  const tabsHandler = (path) => {
+    tabsContent.forEach((el) => el.classList.remove("tabs__content--active"));
+    document
+      .querySelector(`[data-tabs-target="${path}"]`)
+      .classList.add("tabs__content--active");
+  };
+};
 
 
 
