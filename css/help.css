@@ -1,11 +1,45 @@
-.btn-airbnb {
-  --mouse-x: 50;
-  --mouse-y: 50;
-  background-size: 200% 200%;
-  background-position: calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%);
-  background-image: radial-gradient(circle at center, #FF385C 0%, #e61e4d 27.5%, #e31c5f 40%, #d70466 57.5%, #bd1e59 75%, #bd1e59 100%);
-  cursor: pointer;
-  color: #fff;
+/* табы на странице help */
+.tabs-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  border-bottom: 2px solid #dddddd;
+  position: relative;
+}
+
+.tabs-btn {
+  font-size: 15px;
   font-weight: 600;
-  text-transform: initial;
+  color: #717171;
+  background-color: transparent;
+  border: 2px solid transparent;
+  padding: 10px;
+  margin: 6px 6px 6px 0;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+
+.line {
+  position: absolute;
+  top: 52.4px;
+  width: 0%;
+  height: 2px;
+  background-color: #222222;
+  transition: width 0.3s ease-in-out;
+  left: 0;
+}
+
+.tabs-btn:hover {
+  background-color: #f7f7f7;
+  border-radius: 8px;
+}
+
+.tabs_btn--active {
+  color: #222222;
+}
+
+.line--active {
+  left: 0;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 }

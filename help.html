@@ -92,25 +92,33 @@
   <main>
     <section class="help">
       <div class="container">
-        <div class="">
-          
-          <h1>Help page</h1>
-          <p>Help page doesn't ready. Please wait...</p>
-          <button class="btn btn-airbnb">Log in or sign up</button>
+        <h1>Help page</h1>
+        <p>Help page doesn't ready. Please wait...</p>
+        <button class="btn btn-airbnb">Log in or sign up</button>
 
-          <div class="tabs">
-            <nav class="tabs__list">
-              <button class="tabs__btn tabs__btn--active" data-tabs-path="guest">Guest</button>
-              <button class="tabs__btn" data-tabs-path="host">Host</button>
-            </nav>
+        <div class="tabs">
+          <nav class="tabs-list">
+            <button class="tabs-btn tabs_btn--active" data-tabs-path="guest">Guest</button>
+            <button class="tabs-btn" data-tabs-path="host">Host</button>
+            <button class="tabs-btn" data-tabs-path="experience">Experience Host</button>
+            <button class="tabs-btn" data-tabs-path="admin">Travel admin</button>
+            <div class="line line--active"></div>
+          </nav>
 
-            <div class="tabs__content tabs__content--active" data-tabs-target="guest">
-              <h3 class="tabs__content--title">Guides for getting started1</h3>
-            </div>
+          <div class="tabs__content tabs__content--active" data-tabs-target="guest">
+            <h3 class="tabs__content--title">Guides for getting started</h3>
+          </div>
 
-            <div class="tabs__content" data-tabs-target="host">
-              <h3 class="tabs__content--title">Guides for getting started2</h3>
-            </div>
+          <div class="tabs__content" data-tabs-target="host">
+            <h3 class="tabs__content--title">Guides for getting started</h3>
+          </div>
+
+          <div class="tabs__content" data-tabs-target="experience">
+            <h3 class="tabs__content--title">Guides for Experience Hosts</h3>
+          </div>
+
+          <div class="tabs__content" data-tabs-target="admin">
+            <h3 class="tabs__content--title">Guides for travel admins</h3>
           </div>
         </div>
     </section>
