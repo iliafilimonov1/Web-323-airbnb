@@ -2,6 +2,15 @@ import { ModalLogin } from "./modal-login.js";
 
 const modalLogin = new ModalLogin();
 
+/* skeleton */
+const allSkeletons = document.querySelectorAll('.skeleton');
+
+window.addEventListener('load', () => {
+  allSkeletons.forEach(element => {
+    element.classList.remove('skeleton');
+  })
+})
+
 
 /* модалка language */
 const modal = document.querySelector('#modal'); // получение доступа к модалке

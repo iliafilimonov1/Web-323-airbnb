@@ -2,15 +2,30 @@ import { ModalLogin } from "./modal-login.js";
 
 const modalLogin = new ModalLogin();
 
-/* button-airbnb */
-const button = document.querySelector('.btn-airbnb')
-button.addEventListener('mousemove', e => {
-  const rect = button.getBoundingClientRect();
-  const x = (e.clientX - rect.left) * 100 / button.clientWidth
-  const y = (e.clientY - rect.top) * 100 / button.clientHeight
-  button.style.setProperty('--mouse-x', x);
-  button.style.setProperty('--mouse-y', y);
+
+/* skeleton */
+const allSkeletons = document.querySelectorAll('.skeleton');
+
+window.addEventListener('load', () => {
+  allSkeletons.forEach(element => {
+    element.classList.remove('skeleton');
+  })
 })
+
+
+/* button-airbnb */
+const buttonsAirBnb = document.querySelectorAll('.btn-airbnb');
+
+buttonsAirBnb.forEach((button) => {
+  button.addEventListener('mousemove', e => {
+    const rect = button.getBoundingClientRect();
+    const x = (e.clientX - rect.left) * 100 / button.clientWidth;
+    const y = (e.clientY - rect.top) * 100 / button.clientHeight;
+    button.style.setProperty('--mouse-x', x);
+    button.style.setProperty('--mouse-y', y);
+  })
+})
+
 
 
 /* dropdown */

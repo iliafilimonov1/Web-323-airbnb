@@ -7,17 +7,17 @@
   width: 100%;
 }
 
-.header-logo {
+.help-logo {
   display: flex;
   align-items: center;
 }
 
-.header-logo img {
+.help-logo img {
   width: 32px;
   height: 32px;
 }
 
-.header-logo span {
+.help-logo span {
   font-size: 18px;
   font-weight: 600;
   margin-left: 8px;
@@ -194,6 +194,8 @@
 
 .card-guest-guides {
   width: 254px;
+  display: inline-flex;
+  flex-direction: column;
 }
 
 .card-guest-images {
@@ -208,6 +210,7 @@
   font-weight: 600;
   font-size: 16px;
   margin-top: 14px;
+  min-height: 37px; /* скелетон (переполнение текста) */
 }
 
 .mb-32px {
@@ -243,7 +246,7 @@
 
 .popular-article-card p {
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   font-weight: 400;
   color: #717171;
@@ -253,4 +256,31 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* skeleton */
+.skeleton {
+  position: relative;
+}
+
+.skeleton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background: linear-gradient(90deg, #eee, #f9f9f9, #eee);
+  background-size: 200%; /* анимация плавности перехода градиента */
+  animation: skeleton 1s infinite reverse;
+}
+
+@keyframes skeleton {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
 }
