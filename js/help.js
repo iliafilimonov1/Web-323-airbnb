@@ -13,17 +13,6 @@ button.addEventListener('mousemove', e => {
 })
 
 
-/* handler for header active */
-const links = document.querySelectorAll('.nav-link');
-
-links.forEach(link => {
-  link.addEventListener('click', event => {
-    document.querySelector('.nav-link.active').classList.remove('active');
-    event.currentTarget.classList.add('active');
-  })
-})
-
-
 /* dropdown */
 const dropdownButton = document.querySelector('.dropdown__button');
 const dropdownMenu = document.querySelector('.dropdown__menu');
