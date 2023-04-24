@@ -1,0 +1,14 @@
+{
+  "name": "web-323-airbnb",
+  "version": "1.0.0",
+  "default": "src/index.html",
+  "scripts": {
+    "server": "parcel src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}

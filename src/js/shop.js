@@ -1,6 +1,6 @@
-import { ModalLogin } from "./modal-login.js";
+// import { ModalLogin } from "./modal-login.js";
 
-const modalLogin = new ModalLogin();
+// const modalLogin = new ModalLogin();
 
 
 /* initialize swiper shop page */
