@@ -1,3 +1,5 @@
+@import "./forms.css";
+
 /* header */
 .header-help {
   background-color: var(--body-color);
@@ -25,6 +27,44 @@
 
 .header-help .header-buttons {
   width: 118px;
+}
+
+.help-search {
+  width: 300px;
+  align-items: center;
+  display: inline-flex;
+  background: #f7f7f7;
+  border: 1px solid #dddddd;
+  border-radius: 100px;
+  position: relative;
+}
+
+.help-search:hover {
+  background-color: #ebebeb;
+}
+
+
+/*
+TODO: add box-shadow for input focus
+input[type='search']:focus .help-search {
+  box-shadow: inset 0 0 0 2px #222222;
+}
+*/
+
+.popup {
+  display: none;
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  position: absolute;
+  width: 100%;
+  top: 55px;
+  left: 0;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.28);
+}
+
+.popup-show {
+  display: block;
 }
 
 
