@@ -120,7 +120,6 @@
 .registration-text h1 {
   margin-bottom: 8px;
   margin-top: 0;
-  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 26px;
   line-height: 30px;
@@ -128,7 +127,6 @@
 }
 
 .registration-text p {
-  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -164,7 +162,6 @@
 }
 
 .content-header-title {
-  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 24px;
 }
@@ -206,7 +203,6 @@
 }
 
 .card-guest-guides h3 {
-  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 16px;
   margin-top: 14px;
@@ -236,7 +232,6 @@
   cursor: pointer;
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 500;
@@ -246,7 +241,6 @@
 }
 
 .popular-article-card p {
-  font-family: "Poppins", sans-serif;
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;

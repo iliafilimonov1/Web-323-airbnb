@@ -87,7 +87,6 @@
 }
 
 .card-title {
-  font-family: "Poppins-Semibolt", sans-serif;
   font-weight: 600;
   font-size: 16px;
   text-transform: none;
@@ -95,7 +94,6 @@
 }
 
 .card-subtitle {
-  font-family: "Poppins-Regular", Tahoma, Verdana, sans-serif;
   font-weight: 400;
   font-size: 14px;
   margin-top: 8px;
@@ -105,7 +103,6 @@
 
 .price-prev,
 .price-current {
-  font-family: "Poppins-SemiBold", sans-serif;
   font-weight: 400;
   font-size: 14px;
   margin-top: 12px;
@@ -124,7 +121,6 @@
 
 .card-link {
   display: block;
-  font-family: "Poppins-SemiBolt", sans-serif;
   font-size: 14px;
   font-weight: 600;
   margin-top: 12px;
