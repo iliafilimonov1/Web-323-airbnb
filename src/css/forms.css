@@ -37,6 +37,12 @@ input[type='search'] {
   white-space: nowrap;
 }
 
+input[type='search']::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+  color: #222222;
+}
+
 /* clears the ‘X’ from Internet Explorer */
 input[type=search]::-ms-clear {
   display: none;
