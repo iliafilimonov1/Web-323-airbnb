@@ -93,6 +93,47 @@
     </div>
   </header>
 
+  <section class="question">
+    <button id="question-btn" class="btn btn-link">Ask a question</button>
+  </section>
+
+  <dialog class="modal" id="modal-question">
+    <header class="login-header">
+      <button id="close-button" class="button close-button">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
+          focusable="false"
+          style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3; overflow: visible;">
+          <path d="m6 6 20 20"></path>
+          <path d="m26 6-20 20"></path>
+        </svg>
+      </button>
+      <h2 class="login-header__title">Welcome back, User</h2>
+    </header>
+
+    <section class="login-body">
+      <div class="login-body__avatar">
+        <img src="images/avatar.jpg" alt="avatar">
+      </div>
+      <form class="flex-column" action="#">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Your email">
+
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Your password">
+
+        <button id="airbnb" class="btn btn-airbnb" type="button">Log in</button>
+      </form>
+    </section>
+
+    <footer class="login-footer">
+      <button type="button" class="btn btn-link mb-24px">Forgot password?</button>
+      <div class="login-footer__flex">
+        <span> Not you?</span>
+        <button type="button" class="btn btn-link">Use another account</button>
+      </div>
+    </footer>
+  </dialog>
+
 
   <footer class="footer">
     <div class="container">
@@ -227,6 +268,7 @@
 
   <script src="lib/swiper.js"></script>
   <script src="js/theme-switcher.js"></script>
+  <script src="js/help-details.js"></script>
 
 </body>
 

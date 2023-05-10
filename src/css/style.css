@@ -6,6 +6,7 @@
 @import "../css/tabs.css";
 @import "../css/help.css";
 @import "../css/modal.css";
+@import "../css/help-details.css";
 
 body {
   font-family: 'Messina Sans', Tahoma, Arial, sans-serif;
