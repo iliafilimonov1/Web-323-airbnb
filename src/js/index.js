@@ -14,13 +14,15 @@ window.addEventListener('load', () => {
 
 /* модалка language */
 const modal = document.querySelector('#modal'); // получение доступа к модалке
-const openModal = document.querySelector('.language'); // доступ к кнопке language
+const openModals = document.querySelectorAll('.language'); // доступ к кнопке language
 const closeModal = document.querySelector('.close-button'); // доступ к кнопке Close Modal внутри модалки
 
-openModal.addEventListener("click", () => {
-  modal.showModal();
-});
 
+openModals.forEach(button => {
+  button.addEventListener("click", () => {
+    modal.showModal();
+  })
+})
 
 closeModal.addEventListener("click", () => {
   modal.close();
