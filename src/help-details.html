@@ -93,12 +93,29 @@
     </div>
   </header>
 
-  <section class="question">
-    <button id="question-btn" class="btn btn-link">Ask a question</button>
+  <section class="bootstrap">
+    <div class="container">
+
+      <!-- bootstrap here  -->
+
+
+      
+
+      <!-- ask a question -->
+      <button class="btn btn-ask">
+        <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false"
+          style="height: 16px; width: 16px; display: block; fill: currentcolor;">
+          <path
+            d="m5.49 0c-3.02 0-5.49 2.46-5.49 5.49v9.02c0 3.03 2.46 5.49 5.5 5.49h3.23l2.87 3.8c.2.27.6.27.8 0l2.87-3.8h3.23c3.03 0 5.5-2.46 5.5-5.49v-9.02c0-3.03-2.46-5.49-5.49-5.49zm13.01 19h-3.47c-.16 0-.31.07-.4.2l-2.63 3.47-2.63-3.47c-.09-.13-.24-.2-.4-.2h-3.47c-2.48 0-4.5-2.01-4.5-4.49v-9.02c0-2.47 2.02-4.49 4.49-4.49h13.02c2.48 0 4.49 2.01 4.49 4.49v9.02c0 2.48-2.02 4.49-4.5 4.49z"
+            fill-rule="evenodd"></path>
+        </svg>
+        Ask a question
+      </button>
+    </div>
   </section>
 
   <dialog class="modal" id="modal-question">
-    <header class="login-header">
+    <header class="modal-header">
       <button id="close-button" class="button close-button">
         <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
           focusable="false"
@@ -107,31 +124,63 @@
           <path d="m26 6-20 20"></path>
         </svg>
       </button>
-      <h2 class="login-header__title">Welcome back, User</h2>
     </header>
 
-    <section class="login-body">
-      <div class="login-body__avatar">
-        <img src="images/avatar.jpg" alt="avatar">
-      </div>
-      <form class="flex-column" action="#">
-        <label for="email">Email</label>
-        <input id="email" type="email" placeholder="Your email">
+    <section class="modal-body">
+      <h2 class="modal-body__title">Questions about this home?</h2>
+      <p class="modal-body__subtitle">We’re excited you’re here. A Villa Specialist from Luxury Retreats, an Airbnb
+        company, will be in touch to finalize the details.</p>
 
-        <label for="password">Password</label>
-        <input id="password" type="password" placeholder="Your password">
+      <form id="form-modal">
+        <div class="flex">
+          <div class="flex-column mr-9">
+            <label for="firstName"></label>
+            <input id="firstName" type="text" placeholder="First name*">
+            <div class="error-text"></div>
+          </div>
 
-        <button id="airbnb" class="btn btn-airbnb" type="button">Log in</button>
+          <div class="flex-column ">
+            <label for="lastName"></label>
+            <input id="lastName" type="text" placeholder="Last name*">
+          </div>
+        </div>
+
+        <div class="flex">
+          <div class="flex-column">
+            <label for="email"></label>
+            <input id="email" type="email" placeholder="Email*">
+          </div>
+
+          <div class="flex-column ">
+            <label for="phone"></label>
+            <input id="phone" type="tel" placeholder="Telephone">
+          </div>
+        </div>
+
+        <div class="flex-column">
+          <label for="text-message">Your message</label>
+          <textarea name="text" id="text-modal" cols="30" rows="10"
+            placeholder="For example: Is this home family friendly? What other homes should I consider?">
+          </textarea>
+        </div>
+
+        <div class="inline-flex">
+          <input type="checkbox" class="modal-checkbox">
+          <label for="text-message">I'd like to receive marketing and policy communications from Luxury
+            Retreats</label>
+        </div>
+
+        <button class="btn btn-ghost" type="submit">Send message</button>
       </form>
     </section>
 
-    <footer class="login-footer">
-      <button type="button" class="btn btn-link mb-24px">Forgot password?</button>
-      <div class="login-footer__flex">
-        <span> Not you?</span>
-        <button type="button" class="btn btn-link">Use another account</button>
+    <footer class="modal-footer">
+      <div class="modal-footer__flex">
+        <span> Learn how we handle your details in our </span>
+        <a href="#" target="_blank" class="btn btn-link">Privacy policy</a>
       </div>
     </footer>
+
   </dialog>
 
 

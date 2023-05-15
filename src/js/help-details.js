@@ -1,13 +1,11 @@
-/* модалка language */
+/* модалка ask a question (flex) */
 const modal = document.querySelector('#modal-question'); // получение доступа к модалке
-const openModals = document.querySelectorAll('#question-btn'); // доступ к кнопке
+const openModal = document.querySelector('.btn-ask'); // доступ к кнопке
 const closeModal = document.querySelector('.close-button'); // доступ к кнопке Close Modal внутри модалки
 
 
-openModals.forEach(button => {
-  button.addEventListener("click", () => {
-    modal.showModal();
-  })
+openModal.addEventListener("click", () => {
+  modal.showModal();
 })
 
 closeModal.addEventListener("click", () => {
