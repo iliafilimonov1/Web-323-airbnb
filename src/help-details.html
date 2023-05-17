@@ -23,6 +23,8 @@
 
   <link rel="stylesheet" href="css/light.css" media="(prefers-color-scheme: light)">
   <link rel="stylesheet" href="css/dark.css" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-grid.min.css">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -31,7 +33,7 @@
     <div class="container">
 
       <div class="flex">
-        <a class="header-logo" href="#">
+        <a class="header-logo" href="index.html">
           <img src="images/header/logo.svg" alt="logo">
         </a>
 
@@ -44,29 +46,28 @@
             </svg>
           </button>
 
-          <div class="dropdown">
-            <button class="dropdown__button">
-              <div class="icon">
-                <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <line x1="6.55671e-08" y1="1.25" x2="14" y2="1.25" stroke="#222222" stroke-width="1.5" />
-                  <line x1="6.55671e-08" y1="5.25" x2="14" y2="5.25" stroke="#222222" stroke-width="1.5" />
-                  <line x1="6.55671e-08" y1="9.25" x2="14" y2="9.25" stroke="#222222" stroke-width="1.5" />
-                </svg>
-              </div>
-              <div class="avatar">
-                <svg width="28" height="28" viewBox="0 0 32 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="17" cy="17" r="15" fill="#717171" />
-                  <mask id="mask0_351_652" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="4" y="4" width="26"
-                    height="26">
-                    <circle cx="17" cy="17" r="12.1875" fill="#737373" />
-                  </mask>
-                  <g mask="url(#mask0_351_652)">
-                    <circle cx="17" cy="15.125" r="6.5625" fill="white" />
-                    <circle cx="17" cy="31.0625" r="11.25" fill="white" />
-                  </g>
-                </svg>
-              </div>
-            </button>
+          <button class="dropdown__button">
+            <div class="icon">
+              <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="6.55671e-08" y1="1.25" x2="14" y2="1.25" stroke="#222222" stroke-width="1.5" />
+                <line x1="6.55671e-08" y1="5.25" x2="14" y2="5.25" stroke="#222222" stroke-width="1.5" />
+                <line x1="6.55671e-08" y1="9.25" x2="14" y2="9.25" stroke="#222222" stroke-width="1.5" />
+              </svg>
+            </div>
+            <div class="avatar">
+              <svg width="28" height="28" viewBox="0 0 32 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="17" cy="17" r="15" fill="#717171" />
+                <mask id="mask0_351_652" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="4" y="4" width="26"
+                  height="26">
+                  <circle cx="17" cy="17" r="12.1875" fill="#737373" />
+                </mask>
+                <g mask="url(#mask0_351_652)">
+                  <circle cx="17" cy="15.125" r="6.5625" fill="white" />
+                  <circle cx="17" cy="31.0625" r="11.25" fill="white" />
+                </g>
+              </svg>
+            </div>
+
             <ul class="dropdown__menu">
               <a href="#" class="dropdown__menu-item">
                 <li>Sign up</li>
@@ -82,7 +83,7 @@
                 <li>Help</li>
               </a>
             </ul>
-          </div>
+          </button>
 
           <fieldset class="switcher">
             <input type="checkbox" class="switch">
@@ -96,10 +97,23 @@
   <section class="bootstrap">
     <div class="container">
 
-      <!-- bootstrap here  -->
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p>Lorem, ipsum dolor.</p>
+            <p>Lorem, ipsum dolor.</p>
+            <p>Lorem, ipsum dolor.</p>
+          </div>
+          <div class="col">
+            <p>Lorem, ipsum dolor.</p>
+            <p>Lorem, ipsum dolor.</p>
+            <p>Lorem, ipsum dolor.</p>
+          </div>
+        </div>
+      </div>
 
 
-      
+
 
       <!-- ask a question -->
       <button class="btn btn-ask">

@@ -2,11 +2,12 @@
 @import "../css/normalize.css";
 @import "../lib/swiper.css";
 @import "./shop.css";
-@import "../css/forms.css";
+/* @import "../css/forms.css"; */
 @import "../css/tabs.css";
 @import "../css/help.css";
 @import "../css/modal.css";
 @import "../css/help-details.css";
+@import "../css/help.css";
 
 body {
   font-family: 'Messina Sans', Tahoma, Arial, sans-serif;
@@ -164,6 +165,7 @@ a {
 
 .dropdown__button {
   display: inline-flex;
+  position: relative;
   min-width: 76px;
   justify-content: space-between;
   align-items: center;
@@ -204,9 +206,10 @@ a {
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
   padding: 8px 0;
   position: absolute;
-  top: 50%;
-  margin-top: 34px;
+  top: 16px;
   right: 0;
+  margin-top: 34px;
+
   padding: 8px 0;
   min-width: 240px;
 }
