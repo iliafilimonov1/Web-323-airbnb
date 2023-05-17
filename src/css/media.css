@@ -1,0 +1,42 @@
+@media screen and (max-width: 1920px) {}
+
+@media screen and (max-width: 1440px) {
+  .btn-primary {
+    width: 100%;
+  }
+
+  .card-title {
+    background-color: tomato;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .btn-primary {
+    padding: 10px 40px;
+  }
+
+  .card-title {
+    background-color: #c3c3c3;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card-title {
+    background-color: purple;
+  }
+}
+
+@media screen and (max-width: 425px) {}
+
+@media screen and (max-width: 375px) {}
+
+@media screen and (max-width: 320px) {}
+
+
+
+
+
+
+
+
+
