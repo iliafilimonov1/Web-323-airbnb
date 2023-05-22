@@ -1,7 +1,7 @@
 {
   "name": "web-323-airbnb",
   "version": "1.0.0",
-  "default": "src/index.html",
+  "module": "src/js/index.js",
   "scripts": {
     "server": "parcel src/index.html"
   },
