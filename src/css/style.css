@@ -8,7 +8,8 @@
 @import "../css/modal.css";
 @import "../css/help-details.css";
 @import "../css/help.css";
-@import "../css/media.css"; /*  всегда в конце!*/
+@import "../css/media.css";
+/*  всегда в конце!*/
 
 body {
   font-family: 'Messina Sans', Tahoma, Arial, sans-serif;
@@ -19,11 +20,45 @@ body {
   background-color: var(--body-color);
 }
 
-/* .container {
-  max-width: 1328px;
+.container {
   width: 100%;
-  margin: 0 auto;
-} */
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+
 
 h1,
 h2,
@@ -55,7 +90,8 @@ a {
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 4; /* перекрытие skeleton */
+  z-index: 4;
+  /* перекрытие skeleton */
 }
 
 .header-nav {
@@ -63,6 +99,68 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 320px;
+}
+
+@media (max-width: 768px) {
+  .header-nav {
+    display: none;
+  }
+
+  /* меню по клику на burger */
+  .header-nav__active {
+    justify-content: center;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    background: var(--body-color);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    height: 100vh;
+  }
+}
+
+/* иконка закрытия при адаптиве */
+.header-nav .close-button {
+  display: none;
+  background-color: transparent;
+  padding: 8px;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.header-nav .close-button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-nav .close-button:hover::before {
+  background-color: var(--bg-hover);
+}
+
+.header-nav .close-button svg path {
+  stroke: var(--title-color);
+}
+
+@media (max-width: 768px) {
+  .header-nav .close-button {
+    display: inline-flex;
+  }
 }
 
 .nav-link {
@@ -118,10 +216,14 @@ a {
   opacity: 1;
 }
 
-
-
 .header-buttons {
   width: 175px;
+}
+
+@media screen and (max-width: 768px) {
+  .header-buttons {
+    width: 230px;
+  }
 }
 
 .language {
@@ -159,6 +261,52 @@ a {
 }
 
 .language svg {
+  vertical-align: middle;
+}
+
+#btn-burger {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #btn-burger {
+    display: inline-flex;
+  }
+}
+
+.btn-icon {
+  position: relative;
+  padding: 0;
+  border-radius: 50%;
+  background: transparent;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-icon svg path {
+  stroke: var(--nav-link-color);
+}
+
+.btn-icon::before {
+  bottom: 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  border-radius: 22px;
+  left: -3px;
+  right: -3px;
+}
+
+.btn-icon:hover::before {
+  background-color: var(--bg-hover);
+}
+
+.btn-icon svg {
   vertical-align: middle;
 }
 

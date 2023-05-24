@@ -11,6 +11,19 @@ window.addEventListener('load', () => {
   })
 })
 
+/* burger-menu */
+const burgerButton = document.querySelector('#btn-burger'); // получаем иконку burger
+const headerMenu = document.querySelector('.header-nav'); //получаем навигацию
+const closeButton = document.querySelector('#close-navigation'); // получаем иконку закрытия в модалке
+
+burgerButton.addEventListener('click', () => {
+  headerMenu.classList.add('header-nav__active');
+})
+
+closeButton.addEventListener('click', () => {
+  headerMenu.classList.remove('header-nav__active');
+})
+
 
 /* модалка language */
 const modal = document.querySelector('#modal'); // получение доступа к модалке
