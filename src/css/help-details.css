@@ -1,4 +1,27 @@
-.bootstrap {
-  padding: 80px 0 461.2px;
+.bootstrap,
+.messages {
+  padding: 80px;
   margin-top: 24px;
+}
+
+/* table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 48px;
+}
+
+.table thead {
+  background: #121212;
+  color: #fff;
+  border: 1px solid #B4BBC5;
+}
+
+.table th {
+  padding: 16px;
+}
+
+.table-body {
+  font-size: 18px;
+  border: 1px solid #B4BBC5;
 }
