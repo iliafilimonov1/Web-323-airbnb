@@ -1,3 +1,5 @@
+import snackbar from "snackbar";
+
 /* skeleton */
 const allSkeletons = document.querySelectorAll('.skeleton');
 
@@ -52,10 +54,24 @@ class UI {
       <td class="w-200">${message.lastName}</td>
       <td class="w-200">${message.email}</td>
       <td class="w-200">${message.phone}</td>
-      <td class="w-200"><a href="#" class="icon-delete">x</a></td>
+      <td class="w-200"><button class="icon-delete"></button></td>
     `
+
     list.appendChild(row);
 
+  }
+
+  static deleteMessage(element) {
+    if (element.classList.contains('icon-delete')) {
+      element.parentElement.parentElement.remove();
+    }
+  }
+
+  static clearFields() {
+    document.querySelector('#firstName').value = '';
+    document.querySelector('#lastName').value = '';
+    document.querySelector('#email').value = '';
+    document.querySelector('#phone').value = '';
   }
 }
 
@@ -83,7 +99,22 @@ class Store {
 
     console.log('Запись добавлена!');
   }
+
+  static removeMessage(phone) {
+    const messages = Store.getMessages(); // делаем проверку на наличие сообщение в сторе
+
+    messages.forEach((message, index) => {
+      if (message.phone === phone) {
+        messages.splice(index, 1); // удаление книги из таблицы
+      }
+    })
+
+    localStorage.setItem('messages', JSON.stringify(messages)); // обновляет данные в сторе после их удаления
+  }
 }
+
+// при загрузке страницы показывать записи
+document.addEventListener("DOMContentLoaded", UI.displayMessage());
 
 
 // событие при получении данных от пользователя
@@ -91,10 +122,10 @@ document.querySelector('#form-modal').addEventListener('submit', (e) => {
   e.preventDefault(); // предотвращение отправки данных для кнопки с типом submit
 
   // получаю данные от пользователя
-  const firstName = document.querySelector('#firstName').value; // получаем имя
-  const lastName = document.querySelector('#lastName').value; // получаем фамилию
-  const email = document.querySelector('#email').value; // получаем email
-  const phone = document.querySelector('#phone').value; // получаем phone
+  let firstName = document.querySelector('#firstName').value; // получаем имя
+  let lastName = document.querySelector('#lastName').value; // получаем фамилию
+  let email = document.querySelector('#email').value; // получаем email
+  let phone = document.querySelector('#phone').value; // получаем phone
 
   if (firstName === '' || lastName === '' || email === '' || phone === '') {
     alert('Поля не должны быть пустыми!');
@@ -107,6 +138,21 @@ document.querySelector('#form-modal').addEventListener('submit', (e) => {
     // Добавление записи в хранилище
     Store.addMessage(message);
 
+    snackbar.show('Запись добавлена!'); // уведомление прользователя о создании записи
 
+    modal.close(); // закрытие модалки после создания записи
+
+    UI.clearFields(); // очистка данных из модалки
   }
+})
+
+
+// событие удаления сообщения
+document.querySelector('#messages-list').addEventListener('click', (e) => {
+
+  UI.deleteMessage(e.target); // элемент по которому мы кликнули
+
+  Store.removeMessage(e.target.parentElement.previousElementSibling.textContent);
+
+  snackbar.show('Запись была удалена!');
 })
